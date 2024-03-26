@@ -28,85 +28,85 @@ class User extends ChangeNotifier {
     String? sexualOrientation,
     String? education,
     String? work,
-    List<String>? interests,
-    List<String>? hobbies,
-    List<String>? languages,
-    List<String>? skills,
-    List<String>? music,
-    List<String>? movies,
-    List<String>? tvShows,
-    List<String>? books,
-    List<String>? podcasts,
-    List<String>? games,
-    List<String>? sports,
-    List<String>? places,
-    List<String>? foods,
-    List<String>? drinks,
-    List<String>? animals,
-    List<String>? countriesVisited,
+    List<String?>? interests,
+    List<String?>? hobbies,
+    List<String?>? languages,
+    List<String?>? skills,
+    List<String?>? music,
+    List<String?>? movies,
+    List<String?>? tvShows,
+    List<String?>? books,
+    List<String?>? podcasts,
+    List<String?>? games,
+    List<String?>? sports,
+    List<String?>? places,
+    List<String?>? foods,
+    List<String?>? drinks,
+    List<String?>? animals,
+    List<String?>? countriesVisited,
     String? letterLength,
     String? letterFrequency,
     String? replyTime,
-    List<String>? targetGender,
-    List<String>? targetAge,
-    List<String>? targetMBTI,
-    List<String>? targetEnneagram,
-    List<String>? targetZodiac,
-    List<String>? targetReligion,
-    List<String>? targetPoliticalAffiliation,
-    List<String>? targetRelationshipStatus,
-    List<String>? targetSexualOrientation,
-    List<String>? targetEducation,
-    List<String>? targetWork,
-    List<String>? targetInterests,
-    List<String>? targetHobbies,
-    List<String>? targetLanguages,
-    List<String>? targetSkills,
-    List<String>? targetMusic,
-    List<String>? targetMovies,
-    List<String>? targetTVShows,
-    List<String>? targetBooks,
-    List<String>? targetPodcasts,
-    List<String>? targetGames,
-    List<String>? targetSports,
-    List<String>? targetPlaces,
-    List<String>? targetFoods,
-    List<String>? targetDrinks,
-    List<String>? targetAnimals,
-    List<String>? targetCountriesVisited,
-    List<String>? targetLetterLength,
-    List<String>? targetLetterFrequency,
-    List<String>? targetReplyTime,
-    List<String>? excludeGender,
-    List<String>? excludeAge,
-    List<String>? excludeMBTI,
-    List<String>? excludeEnneagram,
-    List<String>? excludeZodiac,
-    List<String>? excludeReligion,
-    List<String>? excludePoliticalAffiliation,
-    List<String>? excludeRelationshipStatus,
-    List<String>? excludeSexualOrientation,
-    List<String>? excludeEducation,
-    List<String>? excludeWork,
-    List<String>? excludeInterests,
-    List<String>? excludeHobbies,
-    List<String>? excludeLanguages,
-    List<String>? excludeSkills,
-    List<String>? excludeMusic,
-    List<String>? excludeMovies,
-    List<String>? excludeTVShows,
-    List<String>? excludeBooks,
-    List<String>? excludePodcasts,
-    List<String>? excludeGames,
-    List<String>? excludeSports,
-    List<String>? excludePlaces,
-    List<String>? excludeFoods,
-    List<String>? excludeDrinks,
-    List<String>? excludeAnimals,
-    List<String>? excludeCountriesVisited,
-    List<String>? excludeLetterLength,
-    List<String>? excludeLetterFrequency,
-    List<String>? excludeReplyTime,
+    List<String?>? targetGender,
+    List<String?>? targetAge,
+    List<String?>? targetMBTI,
+    List<String?>? targetEnneagram,
+    List<String?>? targetZodiac,
+    List<String?>? targetReligion,
+    List<String?>? targetPoliticalAffiliation,
+    List<String?>? targetRelationshipStatus,
+    List<String?>? targetSexualOrientation,
+    List<String?>? targetEducation,
+    List<String?>? targetWork,
+    List<String?>? targetInterests,
+    List<String?>? targetHobbies,
+    List<String?>? targetLanguages,
+    List<String?>? targetSkills,
+    List<String?>? targetMusic,
+    List<String?>? targetMovies,
+    List<String?>? targetTVShows,
+    List<String?>? targetBooks,
+    List<String?>? targetPodcasts,
+    List<String?>? targetGames,
+    List<String?>? targetSports,
+    List<String?>? targetPlaces,
+    List<String?>? targetFoods,
+    List<String?>? targetDrinks,
+    List<String?>? targetAnimals,
+    List<String?>? targetCountriesVisited,
+    List<String?>? targetLetterLength,
+    List<String?>? targetLetterFrequency,
+    List<String?>? targetReplyTime,
+    List<String?>? excludeGender,
+    List<String?>? excludeAge,
+    List<String?>? excludeMBTI,
+    List<String?>? excludeEnneagram,
+    List<String?>? excludeZodiac,
+    List<String?>? excludeReligion,
+    List<String?>? excludePoliticalAffiliation,
+    List<String?>? excludeRelationshipStatus,
+    List<String?>? excludeSexualOrientation,
+    List<String?>? excludeEducation,
+    List<String?>? excludeWork,
+    List<String?>? excludeInterests,
+    List<String?>? excludeHobbies,
+    List<String?>? excludeLanguages,
+    List<String?>? excludeSkills,
+    List<String?>? excludeMusic,
+    List<String?>? excludeMovies,
+    List<String?>? excludeTVShows,
+    List<String?>? excludeBooks,
+    List<String?>? excludePodcasts,
+    List<String?>? excludeGames,
+    List<String?>? excludeSports,
+    List<String?>? excludePlaces,
+    List<String?>? excludeFoods,
+    List<String?>? excludeDrinks,
+    List<String?>? excludeAnimals,
+    List<String?>? excludeCountriesVisited,
+    List<String?>? excludeLetterLength,
+    List<String?>? excludeLetterFrequency,
+    List<String?>? excludeReplyTime,
   })  : _userName = userName,
         _uuid = uuid,
         _name = name,
@@ -238,22 +238,22 @@ class User extends ChangeNotifier {
   String? _sexualOrientation;
   String? _education;
   String? _work;
-  List<String>? _interests;
-  List<String>? _hobbies;
-  List<String>? _languages;
-  List<String>? _skills;
-  List<String>? _music;
-  List<String>? _movies;
-  List<String>? _tvShows;
-  List<String>? _books;
-  List<String>? _podcasts;
-  List<String>? _games;
-  List<String>? _sports;
-  List<String>? _places;
-  List<String>? _foods;
-  List<String>? _drinks;
-  List<String>? _animals;
-  List<String>? _countriesVisited;
+  List<String?>? _interests = [];
+  List<String?>? _hobbies = [];
+  List<String?>? _languages = [];
+  List<String?>? _skills = [];
+  List<String?>? _music = [];
+  List<String?>? _movies = [];
+  List<String?>? _tvShows = [];
+  List<String?>? _books = [];
+  List<String?>? _podcasts = [];
+  List<String?>? _games = [];
+  List<String?>? _sports = [];
+  List<String?>? _places = [];
+  List<String?>? _foods = [];
+  List<String?>? _drinks = [];
+  List<String?>? _animals = [];
+  List<String?>? _countriesVisited = [];
 
   // Writing Habits
 
@@ -263,69 +263,69 @@ class User extends ChangeNotifier {
 
   // Matching Preferences - Inclusion
 
-  List<String>? _targetGender;
-  List<String>? _targetAge;
-  List<String>? _targetMBTI;
-  List<String>? _targetEnneagram;
-  List<String>? _targetZodiac;
-  List<String>? _targetReligion;
-  List<String>? _targetPoliticalAffiliation;
-  List<String>? _targetRelationshipStatus;
-  List<String>? _targetSexualOrientation;
-  List<String>? _targetEducation;
-  List<String>? _targetWork;
-  List<String>? _targetInterests;
-  List<String>? _targetHobbies;
-  List<String>? _targetLanguages;
-  List<String>? _targetSkills;
-  List<String>? _targetMusic;
-  List<String>? _targetMovies;
-  List<String>? _targetTVShows;
-  List<String>? _targetBooks;
-  List<String>? _targetPodcasts;
-  List<String>? _targetGames;
-  List<String>? _targetSports;
-  List<String>? _targetPlaces;
-  List<String>? _targetFoods;
-  List<String>? _targetDrinks;
-  List<String>? _targetAnimals;
-  List<String>? _targetCountriesVisited;
-  List<String>? _targetLetterLength;
-  List<String>? _targetLetterFrequency;
-  List<String>? _targetReplyTime;
+  List<String?>? _targetGender = [];
+  List<String?>? _targetAge = [];
+  List<String?>? _targetMBTI = [];
+  List<String?>? _targetEnneagram = [];
+  List<String?>? _targetZodiac = [];
+  List<String?>? _targetReligion = [];
+  List<String?>? _targetPoliticalAffiliation = [];
+  List<String?>? _targetRelationshipStatus = [];
+  List<String?>? _targetSexualOrientation = [];
+  List<String?>? _targetEducation = [];
+  List<String?>? _targetWork = [];
+  List<String?>? _targetInterests = [];
+  List<String?>? _targetHobbies = [];
+  List<String?>? _targetLanguages = [];
+  List<String?>? _targetSkills = [];
+  List<String?>? _targetMusic = [];
+  List<String?>? _targetMovies = [];
+  List<String?>? _targetTVShows = [];
+  List<String?>? _targetBooks = [];
+  List<String?>? _targetPodcasts = [];
+  List<String?>? _targetGames = [];
+  List<String?>? _targetSports = [];
+  List<String?>? _targetPlaces = [];
+  List<String?>? _targetFoods = [];
+  List<String?>? _targetDrinks = [];
+  List<String?>? _targetAnimals = [];
+  List<String?>? _targetCountriesVisited = [];
+  List<String?>? _targetLetterLength = [];
+  List<String?>? _targetLetterFrequency = [];
+  List<String?>? _targetReplyTime = [];
 
   // Matching Preferences - Exclusion
 
-  List<String>? _excludeGender;
-  List<String>? _excludeAge;
-  List<String>? _excludeMBTI;
-  List<String>? _excludeEnneagram;
-  List<String>? _excludeZodiac;
-  List<String>? _excludeReligion;
-  List<String>? _excludePoliticalAffiliation;
-  List<String>? _excludeRelationshipStatus;
-  List<String>? _excludeSexualOrientation;
-  List<String>? _excludeEducation;
-  List<String>? _excludeWork;
-  List<String>? _excludeInterests;
-  List<String>? _excludeHobbies;
-  List<String>? _excludeLanguages;
-  List<String>? _excludeSkills;
-  List<String>? _excludeMusic;
-  List<String>? _excludeMovies;
-  List<String>? _excludeTVShows;
-  List<String>? _excludeBooks;
-  List<String>? _excludePodcasts;
-  List<String>? _excludeGames;
-  List<String>? _excludeSports;
-  List<String>? _excludePlaces;
-  List<String>? _excludeFoods;
-  List<String>? _excludeDrinks;
-  List<String>? _excludeAnimals;
-  List<String>? _excludeCountriesVisited;
-  List<String>? _excludeLetterLength;
-  List<String>? _excludeLetterFrequency;
-  List<String>? _excludeReplyTime;
+  List<String?>? _excludeGender = [];
+  List<String?>? _excludeAge = [];
+  List<String?>? _excludeMBTI = [];
+  List<String?>? _excludeEnneagram = [];
+  List<String?>? _excludeZodiac = [];
+  List<String?>? _excludeReligion = [];
+  List<String?>? _excludePoliticalAffiliation = [];
+  List<String?>? _excludeRelationshipStatus = [];
+  List<String?>? _excludeSexualOrientation = [];
+  List<String?>? _excludeEducation = [];
+  List<String?>? _excludeWork = [];
+  List<String?>? _excludeInterests = [];
+  List<String?>? _excludeHobbies = [];
+  List<String?>? _excludeLanguages = [];
+  List<String?>? _excludeSkills = [];
+  List<String?>? _excludeMusic = [];
+  List<String?>? _excludeMovies = [];
+  List<String?>? _excludeTVShows = [];
+  List<String?>? _excludeBooks = [];
+  List<String?>? _excludePodcasts = [];
+  List<String?>? _excludeGames = [];
+  List<String?>? _excludeSports = [];
+  List<String?>? _excludePlaces = [];
+  List<String?>? _excludeFoods = [];
+  List<String?>? _excludeDrinks = [];
+  List<String?>? _excludeAnimals = [];
+  List<String?>? _excludeCountriesVisited = [];
+  List<String?>? _excludeLetterLength = [];
+  List<String?>? _excludeLetterFrequency = [];
+  List<String?>? _excludeReplyTime = [];
 
   // Getters
   String get userName => _userName;
@@ -374,37 +374,37 @@ class User extends ChangeNotifier {
 
   String get work => _work!;
 
-  List<String> get interests => _interests!;
+  List<String?> get interests => _interests!;
 
-  List<String> get hobbies => _hobbies!;
+  List<String?> get hobbies => _hobbies!;
 
-  List<String> get languages => _languages!;
+  List<String?> get languages => _languages!;
 
-  List<String> get skills => _skills!;
+  List<String?> get skills => _skills!;
 
-  List<String> get music => _music!;
+  List<String?> get music => _music!;
 
-  List<String> get movies => _movies!;
+  List<String?> get movies => _movies!;
 
-  List<String> get tvShows => _tvShows!;
+  List<String?> get tvShows => _tvShows!;
 
-  List<String> get books => _books!;
+  List<String?> get books => _books!;
 
-  List<String> get podcasts => _podcasts!;
+  List<String?> get podcasts => _podcasts!;
 
-  List<String> get games => _games!;
+  List<String?> get games => _games!;
 
-  List<String> get sports => _sports!;
+  List<String?> get sports => _sports!;
 
-  List<String> get places => _places!;
+  List<String?> get places => _places!;
 
-  List<String> get foods => _foods!;
+  List<String?> get foods => _foods!;
 
-  List<String> get drinks => _drinks!;
+  List<String?> get drinks => _drinks!;
 
-  List<String> get animals => _animals!;
+  List<String?> get animals => _animals!;
 
-  List<String> get countriesVisited => _countriesVisited!;
+  List<String?> get countriesVisited => _countriesVisited!;
 
   String get letterLength => _letterLength!;
 
@@ -412,125 +412,126 @@ class User extends ChangeNotifier {
 
   String get replyTime => _replyTime!;
 
-  List<String> get targetGender => _targetGender!;
+  List<String?> get targetGender => _targetGender!;
 
-  List<String> get targetAge => _targetAge!;
+  List<String?> get targetAge => _targetAge!;
 
-  List<String> get targetMBTI => _targetMBTI!;
+  List<String?> get targetMBTI => _targetMBTI!;
 
-  List<String> get targetEnneagram => _targetEnneagram!;
+  List<String?> get targetEnneagram => _targetEnneagram!;
 
-  List<String> get targetZodiac => _targetZodiac!;
+  List<String?> get targetZodiac => _targetZodiac!;
 
-  List<String> get targetReligion => _targetReligion!;
+  List<String?> get targetReligion => _targetReligion!;
 
-  List<String> get targetPoliticalAffiliation => _targetPoliticalAffiliation!;
+  List<String?> get targetPoliticalAffiliation => _targetPoliticalAffiliation!;
 
-  List<String> get targetRelationshipStatus => _targetRelationshipStatus!;
+  List<String?> get targetRelationshipStatus => _targetRelationshipStatus!;
 
-  List<String> get targetSexualOrientation => _targetSexualOrientation!;
+  List<String?> get targetSexualOrientation => _targetSexualOrientation!;
 
-  List<String> get targetEducation => _targetEducation!;
+  List<String?> get targetEducation => _targetEducation!;
 
-  List<String> get targetWork => _targetWork!;
+  List<String?> get targetWork => _targetWork!;
 
-  List<String> get targetInterests => _targetInterests!;
+  List<String?> get targetInterests => _targetInterests!;
 
-  List<String> get targetHobbies => _targetHobbies!;
+  List<String?> get targetHobbies => _targetHobbies!;
 
-  List<String> get targetLanguages => _targetLanguages!;
+  List<String?> get targetLanguages => _targetLanguages!;
 
-  List<String> get targetSkills => _targetSkills!;
+  List<String?> get targetSkills => _targetSkills!;
 
-  List<String> get targetMusic => _targetMusic!;
+  List<String?> get targetMusic => _targetMusic!;
 
-  List<String> get targetMovies => _targetMovies!;
+  List<String?> get targetMovies => _targetMovies!;
 
-  List<String> get targetTVShows => _targetTVShows!;
+  List<String?> get targetTVShows => _targetTVShows!;
 
-  List<String> get targetBooks => _targetBooks!;
+  List<String?> get targetBooks => _targetBooks!;
 
-  List<String> get targetPodcasts => _targetPodcasts!;
+  List<String?> get targetPodcasts => _targetPodcasts!;
 
-  List<String> get targetGames => _targetGames!;
+  List<String?> get targetGames => _targetGames!;
 
-  List<String> get targetSports => _targetSports!;
+  List<String?> get targetSports => _targetSports!;
 
-  List<String> get targetPlaces => _targetPlaces!;
+  List<String?> get targetPlaces => _targetPlaces!;
 
-  List<String> get targetFoods => _targetFoods!;
+  List<String?> get targetFoods => _targetFoods!;
 
-  List<String> get targetDrinks => _targetDrinks!;
+  List<String?> get targetDrinks => _targetDrinks!;
 
-  List<String> get targetAnimals => _targetAnimals!;
+  List<String?> get targetAnimals => _targetAnimals!;
 
-  List<String> get targetCountriesVisited => _targetCountriesVisited!;
+  List<String?> get targetCountriesVisited => _targetCountriesVisited!;
 
-  List<String> get targetLetterLength => _targetLetterLength!;
+  List<String?> get targetLetterLength => _targetLetterLength!;
 
-  List<String> get targetLetterFrequency => _targetLetterFrequency!;
+  List<String?> get targetLetterFrequency => _targetLetterFrequency!;
 
-  List<String> get targetReplyTime => _targetReplyTime!;
+  List<String?> get targetReplyTime => _targetReplyTime!;
 
-  List<String> get excludeGender => _excludeGender!;
+  List<String?> get excludeGender => _excludeGender!;
 
-  List<String> get excludeAge => _excludeAge!;
+  List<String?> get excludeAge => _excludeAge!;
 
-  List<String> get excludeMBTI => _excludeMBTI!;
+  List<String?> get excludeMBTI => _excludeMBTI!;
 
-  List<String> get excludeEnneagram => _excludeEnneagram!;
+  List<String?> get excludeEnneagram => _excludeEnneagram!;
 
-  List<String> get excludeZodiac => _excludeZodiac!;
+  List<String?> get excludeZodiac => _excludeZodiac!;
 
-  List<String> get excludeReligion => _excludeReligion!;
+  List<String?> get excludeReligion => _excludeReligion!;
 
-  List<String> get excludePoliticalAffiliation => _excludePoliticalAffiliation!;
+  List<String?> get excludePoliticalAffiliation =>
+      _excludePoliticalAffiliation!;
 
-  List<String> get excludeRelationshipStatus => _excludeRelationshipStatus!;
+  List<String?> get excludeRelationshipStatus => _excludeRelationshipStatus!;
 
-  List<String> get excludeSexualOrientation => _excludeSexualOrientation!;
+  List<String?> get excludeSexualOrientation => _excludeSexualOrientation!;
 
-  List<String> get excludeEducation => _excludeEducation!;
+  List<String?> get excludeEducation => _excludeEducation!;
 
-  List<String> get excludeWork => _excludeWork!;
+  List<String?> get excludeWork => _excludeWork!;
 
-  List<String> get excludeInterests => _excludeInterests!;
+  List<String?> get excludeInterests => _excludeInterests!;
 
-  List<String> get excludeHobbies => _excludeHobbies!;
+  List<String?> get excludeHobbies => _excludeHobbies!;
 
-  List<String> get excludeLanguages => _excludeLanguages!;
+  List<String?> get excludeLanguages => _excludeLanguages!;
 
-  List<String> get excludeSkills => _excludeSkills!;
+  List<String?> get excludeSkills => _excludeSkills!;
 
-  List<String> get excludeMusic => _excludeMusic!;
+  List<String?> get excludeMusic => _excludeMusic!;
 
-  List<String> get excludeMovies => _excludeMovies!;
+  List<String?> get excludeMovies => _excludeMovies!;
 
-  List<String> get excludeTVShows => _excludeTVShows!;
+  List<String?> get excludeTVShows => _excludeTVShows!;
 
-  List<String> get excludeBooks => _excludeBooks!;
+  List<String?> get excludeBooks => _excludeBooks!;
 
-  List<String> get excludePodcasts => _excludePodcasts!;
+  List<String?> get excludePodcasts => _excludePodcasts!;
 
-  List<String> get excludeGames => _excludeGames!;
+  List<String?> get excludeGames => _excludeGames!;
 
-  List<String> get excludeSports => _excludeSports!;
+  List<String?> get excludeSports => _excludeSports!;
 
-  List<String> get excludePlaces => _excludePlaces!;
+  List<String?> get excludePlaces => _excludePlaces!;
 
-  List<String> get excludeFoods => _excludeFoods!;
+  List<String?> get excludeFoods => _excludeFoods!;
 
-  List<String> get excludeDrinks => _excludeDrinks!;
+  List<String?> get excludeDrinks => _excludeDrinks!;
 
-  List<String> get excludeAnimals => _excludeAnimals!;
+  List<String?> get excludeAnimals => _excludeAnimals!;
 
-  List<String> get excludeCountriesVisited => _excludeCountriesVisited!;
+  List<String?> get excludeCountriesVisited => _excludeCountriesVisited!;
 
-  List<String> get excludeLetterLength => _excludeLetterLength!;
+  List<String?> get excludeLetterLength => _excludeLetterLength!;
 
-  List<String> get excludeLetterFrequency => _excludeLetterFrequency!;
+  List<String?> get excludeLetterFrequency => _excludeLetterFrequency!;
 
-  List<String> get excludeReplyTime => _excludeReplyTime!;
+  List<String?> get excludeReplyTime => _excludeReplyTime!;
 
   // Setters
   void setUserName(String userName) {
@@ -648,83 +649,83 @@ class User extends ChangeNotifier {
     notifyListeners();
   }
 
-  void setInterests(List<String> interests) {
-    _interests = interests;
+  void setInterests(List<String?> interests) {
+    _interests!.addAll(interests);
     notifyListeners();
   }
 
-  void setHobbies(List<String> hobbies) {
-    _hobbies = hobbies;
+  void setHobbies(List<String?> hobbies) {
+    _hobbies!.addAll(hobbies);
     notifyListeners();
   }
 
-  void setLanguages(List<String> languages) {
-    _languages = languages;
+  void setLanguages(List<String?> languages) {
+    _languages!.addAll(languages);
     notifyListeners();
   }
 
-  void setSkills(List<String> skills) {
-    _skills = skills;
+  void setSkills(List<String?> skills) {
+    _skills!.addAll(skills);
     notifyListeners();
   }
 
-  void setMusic(List<String> music) {
-    _music = music;
+  void setMusic(List<String?> music) {
+    _music!.addAll(music);
     notifyListeners();
   }
 
-  void setMovies(List<String> movies) {
-    _movies = movies;
+  void setMovies(List<String?> movies) {
+    _movies!.addAll(movies);
     notifyListeners();
   }
 
-  void setTVShows(List<String> tvShows) {
-    _tvShows = tvShows;
+  void setTVShows(List<String?> tvShows) {
+    _tvShows!.addAll(tvShows);
     notifyListeners();
   }
 
-  void setBooks(List<String> books) {
-    _books = books;
+  void setBooks(List<String?> books) {
+    _books!.addAll(books);
     notifyListeners();
   }
 
-  void setPodcasts(List<String> podcasts) {
-    _podcasts = podcasts;
+  void setPodcasts(List<String?> podcasts) {
+    _podcasts!.addAll(podcasts);
     notifyListeners();
   }
 
-  void setGames(List<String> games) {
-    _games = games;
+  void setGames(List<String?> games) {
+    _games!.addAll(games);
     notifyListeners();
   }
 
-  void setSports(List<String> sports) {
-    _sports = sports;
+  void setSports(List<String?> sports) {
+    _sports!.addAll(sports);
     notifyListeners();
   }
 
-  void setPlaces(List<String> places) {
-    _places = places;
+  void setPlaces(List<String?> places) {
+    _places!.addAll(places);
     notifyListeners();
   }
 
-  void setFoods(List<String> foods) {
-    _foods = foods;
+  void setFoods(List<String?> foods) {
+    _foods!.addAll(foods);
     notifyListeners();
   }
 
-  void setDrinks(List<String> drinks) {
-    _drinks = drinks;
+  void setDrinks(List<String?> drinks) {
+    _drinks!.addAll(drinks);
     notifyListeners();
   }
 
-  void setAnimals(List<String> animals) {
-    _animals = animals;
+  void setAnimals(List<String?> animals) {
+    _animals!.addAll(animals);
     notifyListeners();
   }
 
-  void setCountriesVisited(List<String> countriesVisited) {
-    _countriesVisited = countriesVisited;
+  void setCountriesVisited(List<String?> countriesVisited) {
+    _countriesVisited!.addAll(countriesVisited);
     notifyListeners();
   }
 
@@ -743,304 +744,304 @@ class User extends ChangeNotifier {
     notifyListeners();
   }
 
-  void setTargetGender(List<String> targetGender) {
-    _targetGender = targetGender;
+  void setTargetGender(List<String?> targetGender) {
+    _targetGender!.addAll(targetGender);
     notifyListeners();
   }
 
-  void setTargetAge(List<String> targetAge) {
-    _targetAge = targetAge;
+  void setTargetAge(List<String?> targetAge) {
+    _targetAge!.addAll(targetAge);
     notifyListeners();
   }
 
-  void setTargetMBTI(List<String> targetMBTI) {
-    _targetMBTI = targetMBTI;
+  void setTargetMBTI(List<String?> targetMBTI) {
+    _targetMBTI!.addAll(targetMBTI);
     notifyListeners();
   }
 
-  void setTargetEnneagram(List<String> targetEnneagram) {
-    _targetEnneagram = targetEnneagram;
+  void setTargetEnneagram(List<String?> targetEnneagram) {
+    _targetEnneagram!.addAll(targetEnneagram);
     notifyListeners();
   }
 
-  void setTargetZodiac(List<String> targetZodiac) {
-    _targetZodiac = targetZodiac;
+  void setTargetZodiac(List<String?> targetZodiac) {
+    _targetZodiac!.addAll(targetZodiac);
     notifyListeners();
   }
 
-  void setTargetReligion(List<String> targetReligion) {
-    _targetReligion = targetReligion;
+  void setTargetReligion(List<String?> targetReligion) {
+    _targetReligion!.addAll(targetReligion);
     notifyListeners();
   }
 
-  void setTargetPoliticalAffiliation(List<String> targetPoliticalAffiliation) {
-    _targetPoliticalAffiliation = targetPoliticalAffiliation;
+  void setTargetPoliticalAffiliation(List<String?> targetPoliticalAffiliation) {
+    _targetPoliticalAffiliation!.addAll(targetPoliticalAffiliation);
     notifyListeners();
   }
 
-  void setTargetRelationshipStatus(List<String> targetRelationshipStatus) {
-    _targetRelationshipStatus = targetRelationshipStatus;
+  void setTargetRelationshipStatus(List<String?> targetRelationshipStatus) {
+    _targetRelationshipStatus!.addAll(targetRelationshipStatus);
     notifyListeners();
   }
 
-  void setTargetSexualOrientation(List<String> targetSexualOrientation) {
-    _targetSexualOrientation = targetSexualOrientation;
+  void setTargetSexualOrientation(List<String?> targetSexualOrientation) {
+    _targetSexualOrientation!.addAll(targetSexualOrientation);
     notifyListeners();
   }
 
-  void setTargetEducation(List<String> targetEducation) {
-    _targetEducation = targetEducation;
+  void setTargetEducation(List<String?> targetEducation) {
+    _targetEducation!.addAll(targetEducation);
     notifyListeners();
   }
 
-  void setTargetWork(List<String> targetWork) {
-    _targetWork = targetWork;
+  void setTargetWork(List<String?> targetWork) {
+    _targetWork!.addAll(targetWork);
     notifyListeners();
   }
 
-  void setTargetInterests(List<String> targetInterests) {
-    _targetInterests = targetInterests;
+  void setTargetInterests(List<String?> targetInterests) {
+    _targetInterests!.addAll(targetInterests);
     notifyListeners();
   }
 
-  void setTargetHobbies(List<String> targetHobbies) {
-    _targetHobbies = targetHobbies;
+  void setTargetHobbies(List<String?> targetHobbies) {
+    _targetHobbies!.addAll(targetHobbies);
     notifyListeners();
   }
 
-  void setTargetLanguages(List<String> targetLanguages) {
-    _targetLanguages = targetLanguages;
+  void setTargetLanguages(List<String?> targetLanguages) {
+    _targetLanguages!.addAll(targetLanguages);
     notifyListeners();
   }
 
-  void setTargetSkills(List<String> targetSkills) {
-    _targetSkills = targetSkills;
+  void setTargetSkills(List<String?> targetSkills) {
+    _targetSkills!.addAll(targetSkills);
     notifyListeners();
   }
 
-  void setTargetMusic(List<String> targetMusic) {
-    _targetMusic = targetMusic;
+  void setTargetMusic(List<String?> targetMusic) {
+    _targetMusic!.addAll(targetMusic);
     notifyListeners();
   }
 
-  void setTargetMovies(List<String> targetMovies) {
-    _targetMovies = targetMovies;
+  void setTargetMovies(List<String?> targetMovies) {
+    _targetMovies!.addAll(targetMovies);
     notifyListeners();
   }
 
-  void setTargetTVShows(List<String> targetTVShows) {
-    _targetTVShows = targetTVShows;
+  void setTargetTVShows(List<String?> targetTVShows) {
+    _targetTVShows!.addAll(targetTVShows);
     notifyListeners();
   }
 
-  void setTargetBooks(List<String> targetBooks) {
-    _targetBooks = targetBooks;
+  void setTargetBooks(List<String?> targetBooks) {
+    _targetBooks!.addAll(targetBooks);
     notifyListeners();
   }
 
-  void setTargetPodcasts(List<String> targetPodcasts) {
-    _targetPodcasts = targetPodcasts;
+  void setTargetPodcasts(List<String?> targetPodcasts) {
+    _targetPodcasts!.addAll(targetPodcasts);
     notifyListeners();
   }
 
-  void setTargetGames(List<String> targetGames) {
-    _targetGames = targetGames;
+  void setTargetGames(List<String?> targetGames) {
+    _targetGames!.addAll(targetGames);
     notifyListeners();
   }
 
-  void setTargetSports(List<String> targetSports) {
-    _targetSports = targetSports;
+  void setTargetSports(List<String?> targetSports) {
+    _targetSports!.addAll(targetSports);
     notifyListeners();
   }
 
-  void setTargetPlaces(List<String> targetPlaces) {
-    _targetPlaces = targetPlaces;
+  void setTargetPlaces(List<String?> targetPlaces) {
+    _targetPlaces!.addAll(targetPlaces);
     notifyListeners();
   }
 
-  void setTargetFoods(List<String> targetFoods) {
-    _targetFoods = targetFoods;
+  void setTargetFoods(List<String?> targetFoods) {
+    _targetFoods!.addAll(targetFoods);
     notifyListeners();
   }
 
-  void setTargetDrinks(List<String> targetDrinks) {
-    _targetDrinks = targetDrinks;
+  void setTargetDrinks(List<String?> targetDrinks) {
+    _targetDrinks!.addAll(targetDrinks);
     notifyListeners();
   }
 
-  void setTargetAnimals(List<String> targetAnimals) {
-    _targetAnimals = targetAnimals;
+  void setTargetAnimals(List<String?> targetAnimals) {
+    _targetAnimals!.addAll(targetAnimals);
     notifyListeners();
   }
 
-  void setTargetCountriesVisited(List<String> targetCountriesVisited) {
-    _targetCountriesVisited = targetCountriesVisited;
+  void setTargetCountriesVisited(List<String?> targetCountriesVisited) {
+    _targetCountriesVisited!.addAll(targetCountriesVisited);
     notifyListeners();
   }
 
-  void setTargetLetterLength(List<String> targetLetterLength) {
-    _targetLetterLength = targetLetterLength;
+  void setTargetLetterLength(List<String?> targetLetterLength) {
+    _targetLetterLength!.addAll(targetLetterLength);
     notifyListeners();
   }
 
-  void setTargetLetterFrequency(List<String> targetLetterFrequency) {
-    _targetLetterFrequency = targetLetterFrequency;
+  void setTargetLetterFrequency(List<String?> targetLetterFrequency) {
+    _targetLetterFrequency!.addAll(targetLetterFrequency);
     notifyListeners();
   }
 
-  void setTargetReplyTime(List<String> targetReplyTime) {
-    _targetReplyTime = targetReplyTime;
+  void setTargetReplyTime(List<String?> targetReplyTime) {
+    _targetReplyTime!.addAll(targetReplyTime);
     notifyListeners();
   }
 
-  void setExcludeGender(List<String> excludeGender) {
-    _excludeGender = excludeGender;
+  void setExcludeGender(List<String?> excludeGender) {
+    _excludeGender!.addAll(excludeGender);
     notifyListeners();
   }
 
-  void setExcludeAge(List<String> excludeAge) {
-    _excludeAge = excludeAge;
+  void setExcludeAge(List<String?> excludeAge) {
+    _excludeAge!.addAll(excludeAge);
     notifyListeners();
   }
 
-  void setExcludeMBTI(List<String> excludeMBTI) {
-    _excludeMBTI = excludeMBTI;
+  void setExcludeMBTI(List<String?> excludeMBTI) {
+    _excludeMBTI!.addAll(excludeMBTI);
     notifyListeners();
   }
 
-  void setExcludeEnneagram(List<String> excludeEnneagram) {
-    _excludeEnneagram = excludeEnneagram;
+  void setExcludeEnneagram(List<String?> excludeEnneagram) {
+    _excludeEnneagram!.addAll(excludeEnneagram);
     notifyListeners();
   }
 
-  void setExcludeZodiac(List<String> excludeZodiac) {
-    _excludeZodiac = excludeZodiac;
+  void setExcludeZodiac(List<String?> excludeZodiac) {
+    _excludeZodiac!.addAll(excludeZodiac);
     notifyListeners();
   }
 
-  void setExcludeReligion(List<String> excludeReligion) {
-    _excludeReligion = excludeReligion;
+  void setExcludeReligion(List<String?> excludeReligion) {
+    _excludeReligion!.addAll(excludeReligion);
     notifyListeners();
   }
 
   void setExcludePoliticalAffiliation(
-      List<String> excludePoliticalAffiliation) {
-    _excludePoliticalAffiliation = excludePoliticalAffiliation;
+      List<String?> excludePoliticalAffiliation) {
+    _excludePoliticalAffiliation!.addAll(excludePoliticalAffiliation);
     notifyListeners();
   }
 
-  void setExcludeRelationshipStatus(List<String> excludeRelationshipStatus) {
-    _excludeRelationshipStatus = excludeRelationshipStatus;
+  void setExcludeRelationshipStatus(List<String?> excludeRelationshipStatus) {
+    _excludeRelationshipStatus!.addAll(excludeRelationshipStatus);
     notifyListeners();
   }
 
-  void setExcludeSexualOrientation(List<String> excludeSexualOrientation) {
-    _excludeSexualOrientation = excludeSexualOrientation;
+  void setExcludeSexualOrientation(List<String?> excludeSexualOrientation) {
+    _excludeSexualOrientation!.addAll(excludeSexualOrientation);
     notifyListeners();
   }
 
-  void setExcludeEducation(List<String> excludeEducation) {
-    _excludeEducation = excludeEducation;
+  void setExcludeEducation(List<String?> excludeEducation) {
+    _excludeEducation!.addAll(excludeEducation);
     notifyListeners();
   }
 
-  void setExcludeWork(List<String> excludeWork) {
-    _excludeWork = excludeWork;
+  void setExcludeWork(List<String?> excludeWork) {
+    _excludeWork!.addAll(excludeWork);
     notifyListeners();
   }
 
-  void setExcludeInterests(List<String> excludeInterests) {
-    _excludeInterests = excludeInterests;
+  void setExcludeInterests(List<String?> excludeInterests) {
+    _excludeInterests!.addAll(excludeInterests);
     notifyListeners();
   }
 
-  void setExcludeHobbies(List<String> excludeHobbies) {
-    _excludeHobbies = excludeHobbies;
+  void setExcludeHobbies(List<String?> excludeHobbies) {
+    _excludeHobbies!.addAll(excludeHobbies);
     notifyListeners();
   }
 
-  void setExcludeLanguages(List<String> excludeLanguages) {
-    _excludeLanguages = excludeLanguages;
+  void setExcludeLanguages(List<String?> excludeLanguages) {
+    _excludeLanguages!.addAll(excludeLanguages);
     notifyListeners();
   }
 
-  void setExcludeSkills(List<String> excludeSkills) {
-    _excludeSkills = excludeSkills;
+  void setExcludeSkills(List<String?> excludeSkills) {
+    _excludeSkills!.addAll(excludeSkills);
     notifyListeners();
   }
 
-  void setExcludeMusic(List<String> excludeMusic) {
-    _excludeMusic = excludeMusic;
+  void setExcludeMusic(List<String?> excludeMusic) {
+    _excludeMusic!.addAll(excludeMusic);
     notifyListeners();
   }
 
-  void setExcludeMovies(List<String> excludeMovies) {
-    _excludeMovies = excludeMovies;
+  void setExcludeMovies(List<String?> excludeMovies) {
+    _excludeMovies!.addAll(excludeMovies);
     notifyListeners();
   }
 
-  void setExcludeTVShows(List<String> excludeTVShows) {
-    _excludeTVShows = excludeTVShows;
+  void setExcludeTVShows(List<String?> excludeTVShows) {
+    _excludeTVShows!.addAll(excludeTVShows);
     notifyListeners();
   }
 
-  void setExcludeBooks(List<String> excludeBooks) {
-    _excludeBooks = excludeBooks;
+  void setExcludeBooks(List<String?> excludeBooks) {
+    _excludeBooks!.addAll(excludeBooks);
     notifyListeners();
   }
 
-  void setExcludePodcasts(List<String> excludePodcasts) {
-    _excludePodcasts = excludePodcasts;
+  void setExcludePodcasts(List<String?> excludePodcasts) {
+    _excludePodcasts!.addAll(excludePodcasts);
     notifyListeners();
   }
 
-  void setExcludeGames(List<String> excludeGames) {
-    _excludeGames = excludeGames;
+  void setExcludeGames(List<String?> excludeGames) {
+    _excludeGames!.addAll(excludeGames);
     notifyListeners();
   }
 
-  void setExcludeSports(List<String> excludeSports) {
-    _excludeSports = excludeSports;
+  void setExcludeSports(List<String?> excludeSports) {
+    _excludeSports!.addAll(excludeSports);
     notifyListeners();
   }
 
-  void setExcludePlaces(List<String> excludePlaces) {
-    _excludePlaces = excludePlaces;
+  void setExcludePlaces(List<String?> excludePlaces) {
+    _excludePlaces!.addAll(excludePlaces);
     notifyListeners();
   }
 
-  void setExcludeFoods(List<String> excludeFoods) {
-    _excludeFoods = excludeFoods;
+  void setExcludeFoods(List<String?> excludeFoods) {
+    _excludeFoods!.addAll(excludeFoods);
     notifyListeners();
   }
 
-  void setExcludeDrinks(List<String> excludeDrinks) {
-    _excludeDrinks = excludeDrinks;
+  void setExcludeDrinks(List<String?> excludeDrinks) {
+    _excludeDrinks!.addAll(excludeDrinks);
     notifyListeners();
   }
 
-  void setExcludeAnimals(List<String> excludeAnimals) {
-    _excludeAnimals = excludeAnimals;
+  void setExcludeAnimals(List<String?> excludeAnimals) {
+    _excludeAnimals!.addAll(excludeAnimals);
     notifyListeners();
   }
 
-  void setExcludeCountriesVisited(List<String> excludeCountriesVisited) {
-    _excludeCountriesVisited = excludeCountriesVisited;
+  void setExcludeCountriesVisited(List<String?> excludeCountriesVisited) {
+    _excludeCountriesVisited!.addAll(excludeCountriesVisited);
     notifyListeners();
   }
 
-  void setExcludeLetterLength(List<String> excludeLetterLength) {
-    _excludeLetterLength = excludeLetterLength;
+  void setExcludeLetterLength(List<String?> excludeLetterLength) {
+    _excludeLetterLength!.addAll(excludeLetterLength);
     notifyListeners();
   }
 
-  void setExcludeLetterFrequency(List<String> excludeLetterFrequency) {
-    _excludeLetterFrequency = excludeLetterFrequency;
+  void setExcludeLetterFrequency(List<String?> excludeLetterFrequency) {
+    _excludeLetterFrequency!.addAll(excludeLetterFrequency);
     notifyListeners();
   }
 
-  void setExcludeReplyTime(List<String> excludeReplyTime) {
-    _excludeReplyTime = excludeReplyTime;
+  void setExcludeReplyTime(List<String?> excludeReplyTime) {
+    _excludeReplyTime!.addAll(excludeReplyTime);
     notifyListeners();
   }
 
