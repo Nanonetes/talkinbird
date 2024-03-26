@@ -212,9 +212,9 @@ class User extends ChangeNotifier {
 
   // Account Details
 
-  String? _userName;
+  String _userName;
+  String _uuid;
   String? _name;
-  String? _uuid;
   String? _email;
   String? _phoneNumber;
   List<LinkedAccounts>? _linkedAccounnts;
@@ -238,8 +238,8 @@ class User extends ChangeNotifier {
   String? _sexualOrientation;
   String? _education;
   String? _work;
-  String? _interests;
-  String? _hobbies;
+  List<String>? _interests;
+  List<String>? _hobbies;
   List<String>? _languages;
   List<String>? _skills;
   List<String>? _music;
@@ -329,109 +329,207 @@ class User extends ChangeNotifier {
 
   // Getters
   String get userName => _userName!;
+
   String get name => _name!;
+
   String get uuid => _uuid!;
+
   String get email => _email!;
+
   String get phoneNumber => _phoneNumber!;
+
   List<LinkedAccounts> get linkedAccounts => _linkedAccounnts!;
+
   String get city => _city!;
+
   String get state => _state!;
+
   String get country => _country!;
+
   String get dateOfBirth => _dateOfBirth!;
+
   String get age => _age!;
+
   String get gender => _gender!;
+
   String get bio => _bio!;
+
   String get profilePicture => _profilePicture!;
+
   String get mbti => _mbti!;
+
   String get enneagram => _enneagram!;
+
   String get zodiac => _zodiac!;
+
   String get religion => _religion!;
+
   String get politicalAffiliation => _politicalAffiliation!;
+
   String get relationshipStatus => _relationshipStatus!;
+
   String get sexualOrientation => _sexualOrientation!;
+
   String get education => _education!;
+
   String get work => _work!;
+
   String get interests => _interests!;
+
   String get hobbies => _hobbies!;
+
   List<String> get languages => _languages!;
+
   List<String> get skills => _skills!;
+
   List<String> get music => _music!;
+
   List<String> get movies => _movies!;
+
   List<String> get tvShows => _tvShows!;
+
   List<String> get books => _books!;
+
   List<String> get podcasts => _podcasts!;
+
   List<String> get games => _games!;
+
   List<String> get sports => _sports!;
+
   List<String> get places => _places!;
+
   List<String> get foods => _foods!;
+
   List<String> get drinks => _drinks!;
+
   List<String> get animals => _animals!;
+
   List<String> get countriesVisited => _countriesVisited!;
 
   String get letterLength => _letterLength!;
+
   String get letterFrequency => _letterFrequency!;
+
   String get replyTime => _replyTime!;
 
   List<String> get targetGender => _targetGender!;
+
   List<String> get targetAge => _targetAge!;
+
   List<String> get targetMBTI => _targetMBTI!;
+
   List<String> get targetEnneagram => _targetEnneagram!;
+
   List<String> get targetZodiac => _targetZodiac!;
+
   List<String> get targetReligion => _targetReligion!;
+
   List<String> get targetPoliticalAffiliation => _targetPoliticalAffiliation!;
+
   List<String> get targetRelationshipStatus => _targetRelationshipStatus!;
+
   List<String> get targetSexualOrientation => _targetSexualOrientation!;
+
   List<String> get targetEducation => _targetEducation!;
+
   List<String> get targetWork => _targetWork!;
+
   List<String> get targetInterests => _targetInterests!;
+
   List<String> get targetHobbies => _targetHobbies!;
+
   List<String> get targetLanguages => _targetLanguages!;
+
   List<String> get targetSkills => _targetSkills!;
+
   List<String> get targetMusic => _targetMusic!;
+
   List<String> get targetMovies => _targetMovies!;
+
   List<String> get targetTVShows => _targetTVShows!;
+
   List<String> get targetBooks => _targetBooks!;
+
   List<String> get targetPodcasts => _targetPodcasts!;
+
   List<String> get targetGames => _targetGames!;
+
   List<String> get targetSports => _targetSports!;
+
   List<String> get targetPlaces => _targetPlaces!;
+
   List<String> get targetFoods => _targetFoods!;
+
   List<String> get targetDrinks => _targetDrinks!;
+
   List<String> get targetAnimals => _targetAnimals!;
+
   List<String> get targetCountriesVisited => _targetCountriesVisited!;
+
   List<String> get targetLetterLength => _targetLetterLength!;
+
   List<String> get targetLetterFrequency => _targetLetterFrequency!;
+
   List<String> get targetReplyTime => _targetReplyTime!;
 
   List<String> get excludeGender => _excludeGender!;
+
   List<String> get excludeAge => _excludeAge!;
+
   List<String> get excludeMBTI => _excludeMBTI!;
+
   List<String> get excludeEnneagram => _excludeEnneagram!;
+
   List<String> get excludeZodiac => _excludeZodiac!;
+
   List<String> get excludeReligion => _excludeReligion!;
+
   List<String> get excludePoliticalAffiliation => _excludePoliticalAffiliation!;
+
   List<String> get excludeRelationshipStatus => _excludeRelationshipStatus!;
+
   List<String> get excludeSexualOrientation => _excludeSexualOrientation!;
+
   List<String> get excludeEducation => _excludeEducation!;
+
   List<String> get excludeWork => _excludeWork!;
+
   List<String> get excludeInterests => _excludeInterests!;
+
   List<String> get excludeHobbies => _excludeHobbies!;
+
   List<String> get excludeLanguages => _excludeLanguages!;
+
   List<String> get excludeSkills => _excludeSkills!;
+
   List<String> get excludeMusic => _excludeMusic!;
+
   List<String> get excludeMovies => _excludeMovies!;
+
   List<String> get excludeTVShows => _excludeTVShows!;
+
   List<String> get excludeBooks => _excludeBooks!;
+
   List<String> get excludePodcasts => _excludePodcasts!;
+
   List<String> get excludeGames => _excludeGames!;
+
   List<String> get excludeSports => _excludeSports!;
+
   List<String> get excludePlaces => _excludePlaces!;
+
   List<String> get excludeFoods => _excludeFoods!;
+
   List<String> get excludeDrinks => _excludeDrinks!;
+
   List<String> get excludeAnimals => _excludeAnimals!;
+
   List<String> get excludeCountriesVisited => _excludeCountriesVisited!;
+
   List<String> get excludeLetterLength => _excludeLetterLength!;
+
   List<String> get excludeLetterFrequency => _excludeLetterFrequency!;
+
   List<String> get excludeReplyTime => _excludeReplyTime!;
 
   // Setters
@@ -943,6 +1041,1151 @@ class User extends ChangeNotifier {
 
   void setExcludeReplyTime(List<String> excludeReplyTime) {
     _excludeReplyTime = excludeReplyTime;
+    notifyListeners();
+  }
+
+  // Detail Deletion Methods
+  void deleteName() {
+    _name = null;
+    notifyListeners();
+  }
+
+  void deleteEmail() {
+    if (_phoneNumber != null || _linkedAccounnts!.isNotEmpty) {
+      _email = null;
+    } else {
+      throw ('Cannot delete email without a phone number or another linked account.');
+    }
+    notifyListeners();
+  }
+
+  void deletePhoneNumber() {
+    _phoneNumber = null;
+    notifyListeners();
+  }
+
+  void deleteCity() {
+    _city = null;
+    notifyListeners();
+  }
+
+  void deleteState() {
+    _state = null;
+    notifyListeners();
+  }
+
+  void deleteCountry() {
+    _country = null;
+    notifyListeners();
+  }
+
+  void deleteDateOfBirth() {
+    _dateOfBirth = null;
+    notifyListeners();
+  }
+
+  void deleteAge() {
+    _age = null;
+    notifyListeners();
+  }
+
+  void deleteGender() {
+    _gender = null;
+    notifyListeners();
+  }
+
+  void deleteBio() {
+    _bio = null;
+    notifyListeners();
+  }
+
+  void deleteProfilePicture() {
+    _profilePicture = null;
+    notifyListeners();
+  }
+
+  void deleteMBTI() {
+    _mbti = null;
+    notifyListeners();
+  }
+
+  void deleteEnneagram() {
+    _enneagram = null;
+    notifyListeners();
+  }
+
+  void deleteZodiac() {
+    _zodiac = null;
+    notifyListeners();
+  }
+
+  void deleteReligion() {
+    _religion = null;
+    notifyListeners();
+  }
+
+  void deletePoliticalAffiliation() {
+    _politicalAffiliation = null;
+    notifyListeners();
+  }
+
+  void deleteRelationshipStatus() {
+    _relationshipStatus = null;
+    notifyListeners();
+  }
+
+  void deleteSexualOrientation() {
+    _sexualOrientation = null;
+    notifyListeners();
+  }
+
+  void deleteEducation() {
+    _education = null;
+    notifyListeners();
+  }
+
+  void deleteWork() {
+    _work = null;
+    notifyListeners();
+  }
+
+  void deleteTheseInterests(List<String> interests) {
+    for (var interest in interests) {
+      _interests!.remove(interest);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllInterests() {
+    _interests!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseHobbies(List<String> hobbies) {
+    for (var hobby in hobbies) {
+      _hobbies!.remove(hobby);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllHobbies() {
+    _hobbies!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseLanguages(List<String> languages) {
+    for (var language in languages) {
+      _languages!.remove(language);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllLanguages() {
+    _languages!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseSkills(List<String> skills) {
+    for (var skill in skills) {
+      _skills!.remove(skill);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllSkills() {
+    _skills!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseMusic(List<String> music) {
+    for (var song in music) {
+      _music!.remove(song);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllMusic() {
+    _music!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseMovies(List<String> movies) {
+    for (var movie in movies) {
+      _movies!.remove(movie);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllMovies() {
+    _movies!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTVShows(List<String> tvShows) {
+    for (var show in tvShows) {
+      _tvShows!.remove(show);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTVShows() {
+    _tvShows!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseBooks(List<String> books) {
+    for (var book in books) {
+      _books!.remove(book);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllBooks() {
+    _books!.clear();
+    notifyListeners();
+  }
+
+  void deleteThesePodcasts(List<String> podcasts) {
+    for (var podcast in podcasts) {
+      _podcasts!.remove(podcast);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllPodcasts() {
+    _podcasts!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseGames(List<String> games) {
+    for (var game in games) {
+      _games!.remove(game);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllGames() {
+    _games!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseSports(List<String> sports) {
+    for (var sport in sports) {
+      _sports!.remove(sport);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllSports() {
+    _sports!.clear();
+    notifyListeners();
+  }
+
+  void deleteThesePlaces(List<String> places) {
+    for (var place in places) {
+      _places!.remove(place);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllPlaces() {
+    _places!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseFoods(List<String> foods) {
+    for (var food in foods) {
+      _foods!.remove(food);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllFoods() {
+    _foods!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseDrinks(List<String> drinks) {
+    for (var drink in drinks) {
+      _drinks!.remove(drink);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllDrinks() {
+    _drinks!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseAnimals(List<String> animals) {
+    for (var animal in animals) {
+      _animals!.remove(animal);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllAnimals() {
+    _animals!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseCountriesVisited(List<String> countriesVisited) {
+    for (var country in countriesVisited) {
+      _countriesVisited!.remove(country);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllCountriesVisited() {
+    _countriesVisited!.clear();
+    notifyListeners();
+  }
+
+  void deleteLetterLength() {
+    _letterLength = null;
+    notifyListeners();
+  }
+
+  void deleteLetterFrequency() {
+    _letterFrequency = null;
+    notifyListeners();
+  }
+
+  void deleteReplyTime() {
+    _replyTime = null;
+    notifyListeners();
+  }
+
+  void deleteTheseTargetGenders(List<String> targetGenders) {
+    for (var gender in targetGenders) {
+      _targetGender!.remove(gender);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetGenders() {
+    _targetGender!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetAges(List<String> targetAges) {
+    for (var age in targetAges) {
+      _targetAge!.remove(age);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetAges() {
+    _targetAge!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetMBTIs(List<String> targetMBTIs) {
+    for (var mbti in targetMBTIs) {
+      _targetMBTI!.remove(mbti);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetMBTIs() {
+    _targetMBTI!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetEnneagrams(List<String> targetEnneagrams) {
+    for (var enneagram in targetEnneagrams) {
+      _targetEnneagram!.remove(enneagram);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetEnneagrams() {
+    _targetEnneagram!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetZodiacs(List<String> targetZodiacs) {
+    for (var zodiac in targetZodiacs) {
+      _targetZodiac!.remove(zodiac);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetZodiacs() {
+    _targetZodiac!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetReligions(List<String> targetReligions) {
+    for (var religion in targetReligions) {
+      _targetReligion!.remove(religion);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetReligions() {
+    _targetReligion!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetPoliticalAffiliations(
+      List<String> targetPoliticalAffiliations) {
+    for (var politicalAffiliation in targetPoliticalAffiliations) {
+      _targetPoliticalAffiliation!.remove(politicalAffiliation);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetPoliticalAffiliations() {
+    _targetPoliticalAffiliation!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetRelationshipStatuses(
+      List<String> targetRelationshipStatuses) {
+    for (var relationshipStatus in targetRelationshipStatuses) {
+      _targetRelationshipStatus!.remove(relationshipStatus);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetRelationshipStatuses() {
+    _targetRelationshipStatus!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetSexualOrientations(
+      List<String> targetSexualOrientations) {
+    for (var sexualOrientation in targetSexualOrientations) {
+      _targetSexualOrientation!.remove(sexualOrientation);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetSexualOrientations() {
+    _targetSexualOrientation!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetEducations(List<String> targetEducations) {
+    for (var education in targetEducations) {
+      _targetEducation!.remove(education);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetEducations() {
+    _targetEducation!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetWorks(List<String> targetWorks) {
+    for (var work in targetWorks) {
+      _targetWork!.remove(work);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetWorks() {
+    _targetWork!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetInterests(List<String> targetInterests) {
+    for (var interest in targetInterests) {
+      _targetInterests!.remove(interest);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetInterests() {
+    _targetInterests!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetHobbies(List<String> targetHobbies) {
+    for (var hobby in targetHobbies) {
+      _targetHobbies!.remove(hobby);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetHobbies() {
+    _targetHobbies!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetLanguages(List<String> targetLanguages) {
+    for (var language in targetLanguages) {
+      _targetLanguages!.remove(language);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetLanguages() {
+    _targetLanguages!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetSkills(List<String> targetSkills) {
+    for (var skill in targetSkills) {
+      _targetSkills!.remove(skill);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetSkills() {
+    _targetSkills!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetMusic(List<String> targetMusic) {
+    for (var song in targetMusic) {
+      _targetMusic!.remove(song);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetMusic() {
+    _targetMusic!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetMovies(List<String> targetMovies) {
+    for (var movie in targetMovies) {
+      _targetMovies!.remove(movie);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetMovies() {
+    _targetMovies!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetTVShows(List<String> targetTVShows) {
+    for (var show in targetTVShows) {
+      _targetTVShows!.remove(show);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetTVShows() {
+    _targetTVShows!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetBooks(List<String> targetBooks) {
+    for (var book in targetBooks) {
+      _targetBooks!.remove(book);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetBooks() {
+    _targetBooks!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetPodcasts(List<String> targetPodcasts) {
+    for (var podcast in targetPodcasts) {
+      _targetPodcasts!.remove(podcast);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetPodcasts() {
+    _targetPodcasts!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetGames(List<String> targetGames) {
+    for (var game in targetGames) {
+      _targetGames!.remove(game);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetGames() {
+    _targetGames!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetSports(List<String> targetSports) {
+    for (var sport in targetSports) {
+      _targetSports!.remove(sport);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetSports() {
+    _targetSports!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetPlaces(List<String> targetPlaces) {
+    for (var place in targetPlaces) {
+      _targetPlaces!.remove(place);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetPlaces() {
+    _targetPlaces!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetFoods(List<String> targetFoods) {
+    for (var food in targetFoods) {
+      _targetFoods!.remove(food);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetFoods() {
+    _targetFoods!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetDrinks(List<String> targetDrinks) {
+    for (var drink in targetDrinks) {
+      _targetDrinks!.remove(drink);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetDrinks() {
+    _targetDrinks!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetAnimals(List<String> targetAnimals) {
+    for (var animal in targetAnimals) {
+      _targetAnimals!.remove(animal);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetAnimals() {
+    _targetAnimals!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetCountriesVisited(List<String> targetCountriesVisited) {
+    for (var country in targetCountriesVisited) {
+      _targetCountriesVisited!.remove(country);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetCountriesVisited() {
+    _targetCountriesVisited!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetLetterLengths(List<String> targetLetterLengths) {
+    for (var letterLength in targetLetterLengths) {
+      _targetLetterLength!.remove(letterLength);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetLetterLengths() {
+    _targetLetterLength!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetLetterFrequencies(
+      List<String> targetLetterFrequencies) {
+    for (var letterFrequency in targetLetterFrequencies) {
+      _targetLetterFrequency!.remove(letterFrequency);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetLetterFrequencies() {
+    _targetLetterFrequency!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseTargetReplyTimes(List<String> targetReplyTimes) {
+    for (var replyTime in targetReplyTimes) {
+      _targetReplyTime!.remove(replyTime);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllTargetReplyTimes() {
+    _targetReplyTime!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedGenders(List<String> excludedGenders) {
+    for (var gender in excludedGenders) {
+      _excludeGender!.remove(gender);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedGenders() {
+    _excludeGender!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedAges(List<String> excludedAges) {
+    for (var age in excludedAges) {
+      _excludeAge!.remove(age);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedAges() {
+    _excludeAge!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedMBTIs(List<String> excludedMBTIs) {
+    for (var mbti in excludedMBTIs) {
+      _excludeMBTI!.remove(mbti);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedMBTIs() {
+    _excludeMBTI!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedEnneagrams(List<String> excludedEnneagrams) {
+    for (var enneagram in excludedEnneagrams) {
+      _excludeEnneagram!.remove(enneagram);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedEnneagrams() {
+    _excludeEnneagram!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedZodiacs(List<String> excludedZodiacs) {
+    for (var zodiac in excludedZodiacs) {
+      _excludeZodiac!.remove(zodiac);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedZodiacs() {
+    _excludeZodiac!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedReligions(List<String> excludedReligions) {
+    for (var religion in excludedReligions) {
+      _excludeReligion!.remove(religion);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedReligions() {
+    _excludeReligion!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedPoliticalAffiliations(
+      List<String> excludedPoliticalAffiliations) {
+    for (var politicalAffiliation in excludedPoliticalAffiliations) {
+      _excludePoliticalAffiliation!.remove(politicalAffiliation);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedPoliticalAffiliations() {
+    _excludePoliticalAffiliation!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedRelationshipStatuses(
+      List<String> excludedRelationshipStatuses) {
+    for (var relationshipStatus in excludedRelationshipStatuses) {
+      _excludeRelationshipStatus!.remove(relationshipStatus);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedRelationshipStatuses() {
+    _excludeRelationshipStatus!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedSexualOrientations(
+      List<String> excludedSexualOrientations) {
+    for (var sexualOrientation in excludedSexualOrientations) {
+      _excludeSexualOrientation!.remove(sexualOrientation);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedSexualOrientations() {
+    _excludeSexualOrientation!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedEducations(List<String> excludedEducations) {
+    for (var education in excludedEducations) {
+      _excludeEducation!.remove(education);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedEducations() {
+    _excludeEducation!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedWorks(List<String> excludedWorks) {
+    for (var work in excludedWorks) {
+      _excludeWork!.remove(work);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedWorks() {
+    _excludeWork!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedInterests(List<String> excludedInterests) {
+    for (var interest in excludedInterests) {
+      _excludeInterests!.remove(interest);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedInterests() {
+    _excludeInterests!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedHobbies(List<String> excludedHobbies) {
+    for (var hobby in excludedHobbies) {
+      _excludeHobbies!.remove(hobby);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedHobbies() {
+    _excludeHobbies!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedLanguages(List<String> excludedLanguages) {
+    for (var language in excludedLanguages) {
+      _excludeLanguages!.remove(language);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedLanguages() {
+    _excludeLanguages!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedSkills(List<String> excludedSkills) {
+    for (var skill in excludedSkills) {
+      _excludeSkills!.remove(skill);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedSkills() {
+    _excludeSkills!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedMusic(List<String> excludedMusic) {
+    for (var song in excludedMusic) {
+      _excludeMusic!.remove(song);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedMusic() {
+    _excludeMusic!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedMovies(List<String> excludedMovies) {
+    for (var movie in excludedMovies) {
+      _excludeMovies!.remove(movie);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedMovies() {
+    _excludeMovies!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedTVShows(List<String> excludedTVShows) {
+    for (var show in excludedTVShows) {
+      _excludeTVShows!.remove(show);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedTVShows() {
+    _excludeTVShows!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedBooks(List<String> excludedBooks) {
+    for (var book in excludedBooks) {
+      _excludeBooks!.remove(book);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedBooks() {
+    _excludeBooks!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedPodcasts(List<String> excludedPodcasts) {
+    for (var podcast in excludedPodcasts) {
+      _excludePodcasts!.remove(podcast);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedPodcasts() {
+    _excludePodcasts!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedGames(List<String> excludedGames) {
+    for (var game in excludedGames) {
+      _excludeGames!.remove(game);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedGames() {
+    _excludeGames!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedSports(List<String> excludedSports) {
+    for (var sport in excludedSports) {
+      _excludeSports!.remove(sport);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedSports() {
+    _excludeSports!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedPlaces(List<String> excludedPlaces) {
+    for (var place in excludedPlaces) {
+      _excludePlaces!.remove(place);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedPlaces() {
+    _excludePlaces!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedFoods(List<String> excludedFoods) {
+    for (var food in excludedFoods) {
+      _excludeFoods!.remove(food);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedFoods() {
+    _excludeFoods!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedDrinks(List<String> excludedDrinks) {
+    for (var drink in excludedDrinks) {
+      _excludeDrinks!.remove(drink);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedDrinks() {
+    _excludeDrinks!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedAnimals(List<String> excludedAnimals) {
+    for (var animal in excludedAnimals) {
+      _excludeAnimals!.remove(animal);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedAnimals() {
+    _excludeAnimals!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedCountriesVisited(
+      List<String> excludedCountriesVisited) {
+    for (var country in excludedCountriesVisited) {
+      _excludeCountriesVisited!.remove(country);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedCountriesVisited() {
+    _excludeCountriesVisited!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedLetterLengths(List<String> excludedLetterLengths) {
+    for (var letterLength in excludedLetterLengths) {
+      _excludeLetterLength!.remove(letterLength);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedLetterLengths() {
+    _excludeLetterLength!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedLetterFrequencies(
+      List<String> excludedLetterFrequencies) {
+    for (var letterFrequency in excludedLetterFrequencies) {
+      _excludeLetterFrequency!.remove(letterFrequency);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedLetterFrequencies() {
+    _excludeLetterFrequency!.clear();
+    notifyListeners();
+  }
+
+  void deleteTheseExcludedReplyTimes(List<String> excludedReplyTimes) {
+    for (var replyTime in excludedReplyTimes) {
+      _excludeReplyTime!.remove(replyTime);
+    }
+    notifyListeners();
+  }
+
+  void deleteAllExcludedReplyTimes() {
+    _excludeReplyTime!.clear();
+    notifyListeners();
+  }
+
+  void deleteAllDetails() {
+    _name = null;
+    _email = null;
+    _phoneNumber = null;
+    _city = null;
+    _state = null;
+    _country = null;
+    _dateOfBirth = null;
+    _age = null;
+    _gender = null;
+    _bio = null;
+    _profilePicture = null;
+    _mbti = null;
+    _enneagram = null;
+    _zodiac = null;
+    _religion = null;
+    _politicalAffiliation = null;
+    _relationshipStatus = null;
+    _sexualOrientation = null;
+    _education = null;
+    _work = null;
+    _interests = null;
+    _hobbies = null;
+    _languages = null;
+    _skills = null;
+    _music = null;
+
+    _movies = null;
+    _tvShows = null;
+    _books = null;
+    _podcasts = null;
+    _games = null;
+    _sports = null;
+    _places = null;
+    _foods = null;
+    _drinks = null;
+    _animals = null;
+    _countriesVisited = null;
+    _letterLength = null;
+    _letterFrequency = null;
+    _replyTime = null;
+    _targetGender = null;
+    _targetAge = null;
+    _targetMBTI = null;
+    _targetEnneagram = null;
+    _targetZodiac = null;
+    _targetReligion = null;
+    _targetPoliticalAffiliation = null;
+    _targetRelationshipStatus = null;
+    _targetSexualOrientation = null;
+    _targetEducation = null;
+    _targetWork = null;
+    _targetInterests = null;
+    _targetHobbies = null;
+    _targetLanguages = null;
+    _targetSkills = null;
+    _targetMusic = null;
+    _targetMovies = null;
+    _targetTVShows = null;
+    _targetBooks = null;
+    _targetPodcasts = null;
+    _targetGames = null;
+    _targetSports = null;
+    _targetPlaces = null;
+    _targetFoods = null;
+    _targetDrinks = null;
+    _targetAnimals = null;
+    _targetCountriesVisited = null;
+    _targetLetterLength = null;
+    _targetLetterFrequency = null;
+    _targetReplyTime = null;
+    _excludeGender = null;
+    _excludeAge = null;
+    _excludeMBTI = null;
+    _excludeEnneagram = null;
+    _excludeZodiac = null;
+    _excludeReligion = null;
+    _excludePoliticalAffiliation = null;
+    _excludeRelationshipStatus = null;
+    _excludeSexualOrientation = null;
+    _excludeEducation = null;
+    _excludeWork = null;
+    _excludeInterests = null;
+    _excludeHobbies = null;
+    _excludeLanguages = null;
+    _excludeSkills = null;
+    _excludeMusic = null;
+    _excludeMovies = null;
+    _excludeTVShows = null;
+    _excludeBooks = null;
+    _excludePodcasts = null;
+    _excludeGames = null;
+    _excludeSports = null;
+    _excludePlaces = null;
+    _excludeFoods = null;
+    _excludeDrinks = null;
+    _excludeAnimals = null;
+    _excludeCountriesVisited = null;
+    _excludeLetterLength = null;
+    _excludeLetterFrequency = null;
+    _excludeReplyTime = null;
     notifyListeners();
   }
 }
