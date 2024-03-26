@@ -28,8 +28,8 @@ class User extends ChangeNotifier {
     String? sexualOrientation,
     String? education,
     String? work,
-    String? interests,
-    String? hobbies,
+    List<String>? interests,
+    List<String>? hobbies,
     List<String>? languages,
     List<String>? skills,
     List<String>? music,
@@ -112,7 +112,7 @@ class User extends ChangeNotifier {
         _name = name,
         _email = email,
         _phoneNumber = phoneNumber,
-        _linkedAccounnts = linkedAccounts,
+        _linkedAccounts = linkedAccounts,
         _city = city,
         _state = state,
         _country = country,
@@ -217,7 +217,7 @@ class User extends ChangeNotifier {
   String? _name;
   String? _email;
   String? _phoneNumber;
-  List<LinkedAccounts>? _linkedAccounnts;
+  List<LinkedAccounts>? _linkedAccounts;
   String? _city;
   String? _state;
   String? _country;
@@ -328,17 +328,17 @@ class User extends ChangeNotifier {
   List<String>? _excludeReplyTime;
 
   // Getters
-  String get userName => _userName!;
+  String get userName => _userName;
+
+  String get uuid => _uuid;
 
   String get name => _name!;
-
-  String get uuid => _uuid!;
 
   String get email => _email!;
 
   String get phoneNumber => _phoneNumber!;
 
-  List<LinkedAccounts> get linkedAccounts => _linkedAccounnts!;
+  List<LinkedAccounts> get linkedAccounts => _linkedAccounts!;
 
   String get city => _city!;
 
@@ -374,9 +374,9 @@ class User extends ChangeNotifier {
 
   String get work => _work!;
 
-  String get interests => _interests!;
+  List<String> get interests => _interests!;
 
-  String get hobbies => _hobbies!;
+  List<String> get hobbies => _hobbies!;
 
   List<String> get languages => _languages!;
 
@@ -558,8 +558,8 @@ class User extends ChangeNotifier {
     notifyListeners();
   }
 
-  void setLinkedAccounnts(List<LinkedAccounts> linkedAccounts) {
-    _linkedAccounnts = linkedAccounts;
+  void setLinkedAccounts(List<LinkedAccounts> linkedAccounts) {
+    _linkedAccounts = linkedAccounts;
     notifyListeners();
   }
 
@@ -648,12 +648,12 @@ class User extends ChangeNotifier {
     notifyListeners();
   }
 
-  void setInterests(String interests) {
+  void setInterests(List<String> interests) {
     _interests = interests;
     notifyListeners();
   }
 
-  void setHobbies(String hobbies) {
+  void setHobbies(List<String> hobbies) {
     _hobbies = hobbies;
     notifyListeners();
   }
@@ -1051,7 +1051,7 @@ class User extends ChangeNotifier {
   }
 
   void deleteEmail() {
-    if (_phoneNumber != null || _linkedAccounnts!.isNotEmpty) {
+    if (_phoneNumber != null || _linkedAccounts!.isNotEmpty) {
       _email = null;
     } else {
       throw ('Cannot delete email without a phone number or another linked account.');
