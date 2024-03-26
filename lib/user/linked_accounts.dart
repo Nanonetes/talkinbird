@@ -1,0 +1,15 @@
+enum LinkedAccounts {
+  google,
+  facebook,
+  instagram,
+  apple,
+  twitter,
+  github,
+  microsoft,
+  linkedin,
+  email,
+  phone,
+  password,
+  reddit,
+  medium,
+}
