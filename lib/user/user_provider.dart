@@ -3,6 +3,213 @@ import 'package:flutter/material.dart';
 import 'linked_accounts.dart';
 
 class User extends ChangeNotifier {
+  // Constructor
+  User({
+    required String userName,
+    required String uuid,
+    String? name,
+    String? email,
+    String? phoneNumber,
+    List<LinkedAccounts>? linkedAccounts,
+    String? city,
+    String? state,
+    String? country,
+    String? dateOfBirth,
+    String? age,
+    String? gender,
+    String? bio,
+    String? profilePicture,
+    String? mbti,
+    String? enneagram,
+    String? zodiac,
+    String? religion,
+    String? politicalAffiliation,
+    String? relationshipStatus,
+    String? sexualOrientation,
+    String? education,
+    String? work,
+    String? interests,
+    String? hobbies,
+    List<String>? languages,
+    List<String>? skills,
+    List<String>? music,
+    List<String>? movies,
+    List<String>? tvShows,
+    List<String>? books,
+    List<String>? podcasts,
+    List<String>? games,
+    List<String>? sports,
+    List<String>? places,
+    List<String>? foods,
+    List<String>? drinks,
+    List<String>? animals,
+    List<String>? countriesVisited,
+    String? letterLength,
+    String? letterFrequency,
+    String? replyTime,
+    List<String>? targetGender,
+    List<String>? targetAge,
+    List<String>? targetMBTI,
+    List<String>? targetEnneagram,
+    List<String>? targetZodiac,
+    List<String>? targetReligion,
+    List<String>? targetPoliticalAffiliation,
+    List<String>? targetRelationshipStatus,
+    List<String>? targetSexualOrientation,
+    List<String>? targetEducation,
+    List<String>? targetWork,
+    List<String>? targetInterests,
+    List<String>? targetHobbies,
+    List<String>? targetLanguages,
+    List<String>? targetSkills,
+    List<String>? targetMusic,
+    List<String>? targetMovies,
+    List<String>? targetTVShows,
+    List<String>? targetBooks,
+    List<String>? targetPodcasts,
+    List<String>? targetGames,
+    List<String>? targetSports,
+    List<String>? targetPlaces,
+    List<String>? targetFoods,
+    List<String>? targetDrinks,
+    List<String>? targetAnimals,
+    List<String>? targetCountriesVisited,
+    List<String>? targetLetterLength,
+    List<String>? targetLetterFrequency,
+    List<String>? targetReplyTime,
+    List<String>? excludeGender,
+    List<String>? excludeAge,
+    List<String>? excludeMBTI,
+    List<String>? excludeEnneagram,
+    List<String>? excludeZodiac,
+    List<String>? excludeReligion,
+    List<String>? excludePoliticalAffiliation,
+    List<String>? excludeRelationshipStatus,
+    List<String>? excludeSexualOrientation,
+    List<String>? excludeEducation,
+    List<String>? excludeWork,
+    List<String>? excludeInterests,
+    List<String>? excludeHobbies,
+    List<String>? excludeLanguages,
+    List<String>? excludeSkills,
+    List<String>? excludeMusic,
+    List<String>? excludeMovies,
+    List<String>? excludeTVShows,
+    List<String>? excludeBooks,
+    List<String>? excludePodcasts,
+    List<String>? excludeGames,
+    List<String>? excludeSports,
+    List<String>? excludePlaces,
+    List<String>? excludeFoods,
+    List<String>? excludeDrinks,
+    List<String>? excludeAnimals,
+    List<String>? excludeCountriesVisited,
+    List<String>? excludeLetterLength,
+    List<String>? excludeLetterFrequency,
+    List<String>? excludeReplyTime,
+  })  : _userName = userName,
+        _uuid = uuid,
+        _name = name,
+        _email = email,
+        _phoneNumber = phoneNumber,
+        _linkedAccounnts = linkedAccounts,
+        _city = city,
+        _state = state,
+        _country = country,
+        _dateOfBirth = dateOfBirth,
+        _age = age,
+        _gender = gender,
+        _bio = bio,
+        _profilePicture = profilePicture,
+        _mbti = mbti,
+        _enneagram = enneagram,
+        _zodiac = zodiac,
+        _religion = religion,
+        _politicalAffiliation = politicalAffiliation,
+        _relationshipStatus = relationshipStatus,
+        _sexualOrientation = sexualOrientation,
+        _education = education,
+        _work = work,
+        _interests = interests,
+        _hobbies = hobbies,
+        _languages = languages,
+        _skills = skills,
+        _music = music,
+        _movies = movies,
+        _tvShows = tvShows,
+        _books = books,
+        _podcasts = podcasts,
+        _games = games,
+        _sports = sports,
+        _places = places,
+        _foods = foods,
+        _drinks = drinks,
+        _animals = animals,
+        _countriesVisited = countriesVisited,
+        _letterLength = letterLength,
+        _letterFrequency = letterFrequency,
+        _replyTime = replyTime,
+        _targetGender = targetGender,
+        _targetAge = targetAge,
+        _targetMBTI = targetMBTI,
+        _targetEnneagram = targetEnneagram,
+        _targetZodiac = targetZodiac,
+        _targetReligion = targetReligion,
+        _targetPoliticalAffiliation = targetPoliticalAffiliation,
+        _targetRelationshipStatus = targetRelationshipStatus,
+        _targetSexualOrientation = targetSexualOrientation,
+        _targetEducation = targetEducation,
+        _targetWork = targetWork,
+        _targetInterests = targetInterests,
+        _targetHobbies = targetHobbies,
+        _targetLanguages = targetLanguages,
+        _targetSkills = targetSkills,
+        _targetMusic = targetMusic,
+        _targetMovies = targetMovies,
+        _targetTVShows = targetTVShows,
+        _targetBooks = targetBooks,
+        _targetPodcasts = targetPodcasts,
+        _targetGames = targetGames,
+        _targetSports = targetSports,
+        _targetPlaces = targetPlaces,
+        _targetFoods = targetFoods,
+        _targetDrinks = targetDrinks,
+        _targetAnimals = targetAnimals,
+        _targetCountriesVisited = targetCountriesVisited,
+        _targetLetterLength = targetLetterLength,
+        _targetLetterFrequency = targetLetterFrequency,
+        _targetReplyTime = targetReplyTime,
+        _excludeGender = excludeGender,
+        _excludeAge = excludeAge,
+        _excludeMBTI = excludeMBTI,
+        _excludeEnneagram = excludeEnneagram,
+        _excludeZodiac = excludeZodiac,
+        _excludeReligion = excludeReligion,
+        _excludePoliticalAffiliation = excludePoliticalAffiliation,
+        _excludeRelationshipStatus = excludeRelationshipStatus,
+        _excludeSexualOrientation = excludeSexualOrientation,
+        _excludeEducation = excludeEducation,
+        _excludeWork = excludeWork,
+        _excludeInterests = excludeInterests,
+        _excludeHobbies = excludeHobbies,
+        _excludeLanguages = excludeLanguages,
+        _excludeSkills = excludeSkills,
+        _excludeMusic = excludeMusic,
+        _excludeMovies = excludeMovies,
+        _excludeTVShows = excludeTVShows,
+        _excludeBooks = excludeBooks,
+        _excludePodcasts = excludePodcasts,
+        _excludeGames = excludeGames,
+        _excludeSports = excludeSports,
+        _excludePlaces = excludePlaces,
+        _excludeFoods = excludeFoods,
+        _excludeDrinks = excludeDrinks,
+        _excludeAnimals = excludeAnimals,
+        _excludeCountriesVisited = excludeCountriesVisited,
+        _excludeLetterLength = excludeLetterLength,
+        _excludeLetterFrequency = excludeLetterFrequency,
+        _excludeReplyTime = excludeReplyTime;
+
   // Account Details
 
   String? _userName;
@@ -126,7 +333,7 @@ class User extends ChangeNotifier {
   String get uuid => _uuid!;
   String get email => _email!;
   String get phoneNumber => _phoneNumber!;
-  List<LinkedAccounts> get linkedAccounnts => _linkedAccounnts!;
+  List<LinkedAccounts> get linkedAccounts => _linkedAccounnts!;
   String get city => _city!;
   String get state => _state!;
   String get country => _country!;
@@ -590,6 +797,152 @@ class User extends ChangeNotifier {
 
   void setExcludeGender(List<String> excludeGender) {
     _excludeGender = excludeGender;
+    notifyListeners();
+  }
+
+  void setExcludeAge(List<String> excludeAge) {
+    _excludeAge = excludeAge;
+    notifyListeners();
+  }
+
+  void setExcludeMBTI(List<String> excludeMBTI) {
+    _excludeMBTI = excludeMBTI;
+    notifyListeners();
+  }
+
+  void setExcludeEnneagram(List<String> excludeEnneagram) {
+    _excludeEnneagram = excludeEnneagram;
+    notifyListeners();
+  }
+
+  void setExcludeZodiac(List<String> excludeZodiac) {
+    _excludeZodiac = excludeZodiac;
+    notifyListeners();
+  }
+
+  void setExcludeReligion(List<String> excludeReligion) {
+    _excludeReligion = excludeReligion;
+    notifyListeners();
+  }
+
+  void setExcludePoliticalAffiliation(
+      List<String> excludePoliticalAffiliation) {
+    _excludePoliticalAffiliation = excludePoliticalAffiliation;
+    notifyListeners();
+  }
+
+  void setExcludeRelationshipStatus(List<String> excludeRelationshipStatus) {
+    _excludeRelationshipStatus = excludeRelationshipStatus;
+    notifyListeners();
+  }
+
+  void setExcludeSexualOrientation(List<String> excludeSexualOrientation) {
+    _excludeSexualOrientation = excludeSexualOrientation;
+    notifyListeners();
+  }
+
+  void setExcludeEducation(List<String> excludeEducation) {
+    _excludeEducation = excludeEducation;
+    notifyListeners();
+  }
+
+  void setExcludeWork(List<String> excludeWork) {
+    _excludeWork = excludeWork;
+    notifyListeners();
+  }
+
+  void setExcludeInterests(List<String> excludeInterests) {
+    _excludeInterests = excludeInterests;
+    notifyListeners();
+  }
+
+  void setExcludeHobbies(List<String> excludeHobbies) {
+    _excludeHobbies = excludeHobbies;
+    notifyListeners();
+  }
+
+  void setExcludeLanguages(List<String> excludeLanguages) {
+    _excludeLanguages = excludeLanguages;
+    notifyListeners();
+  }
+
+  void setExcludeSkills(List<String> excludeSkills) {
+    _excludeSkills = excludeSkills;
+    notifyListeners();
+  }
+
+  void setExcludeMusic(List<String> excludeMusic) {
+    _excludeMusic = excludeMusic;
+    notifyListeners();
+  }
+
+  void setExcludeMovies(List<String> excludeMovies) {
+    _excludeMovies = excludeMovies;
+    notifyListeners();
+  }
+
+  void setExcludeTVShows(List<String> excludeTVShows) {
+    _excludeTVShows = excludeTVShows;
+    notifyListeners();
+  }
+
+  void setExcludeBooks(List<String> excludeBooks) {
+    _excludeBooks = excludeBooks;
+    notifyListeners();
+  }
+
+  void setExcludePodcasts(List<String> excludePodcasts) {
+    _excludePodcasts = excludePodcasts;
+    notifyListeners();
+  }
+
+  void setExcludeGames(List<String> excludeGames) {
+    _excludeGames = excludeGames;
+    notifyListeners();
+  }
+
+  void setExcludeSports(List<String> excludeSports) {
+    _excludeSports = excludeSports;
+    notifyListeners();
+  }
+
+  void setExcludePlaces(List<String> excludePlaces) {
+    _excludePlaces = excludePlaces;
+    notifyListeners();
+  }
+
+  void setExcludeFoods(List<String> excludeFoods) {
+    _excludeFoods = excludeFoods;
+    notifyListeners();
+  }
+
+  void setExcludeDrinks(List<String> excludeDrinks) {
+    _excludeDrinks = excludeDrinks;
+    notifyListeners();
+  }
+
+  void setExcludeAnimals(List<String> excludeAnimals) {
+    _excludeAnimals = excludeAnimals;
+    notifyListeners();
+  }
+
+  void setExcludeCountriesVisited(List<String> excludeCountriesVisited) {
+    _excludeCountriesVisited = excludeCountriesVisited;
+    notifyListeners();
+  }
+
+  void setExcludeLetterLength(List<String> excludeLetterLength) {
+    _excludeLetterLength = excludeLetterLength;
+    notifyListeners();
+  }
+
+  void setExcludeLetterFrequency(List<String> excludeLetterFrequency) {
+    _excludeLetterFrequency = excludeLetterFrequency;
+    notifyListeners();
+  }
+
+  void setExcludeReplyTime(List<String> excludeReplyTime) {
+    _excludeReplyTime = excludeReplyTime;
     notifyListeners();
   }
 }
